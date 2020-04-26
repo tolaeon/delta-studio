@@ -1,0 +1,13 @@
+metadata:
+  name: Tolæon Delta Studio
+projects:
+  - name: delta-studio
+    source:
+      location: 'https://gitlab.com/tolaeon/openshift/delta-studio.git'
+      type: git
+      branch: master
+components:
+  - type: cheEditor
+    reference: >-
+      https://gitlab.com/tolaeon/openshift/delta-studio/-/raw/master/che-editor.meta.yaml
+apiVersion: 1.0.0

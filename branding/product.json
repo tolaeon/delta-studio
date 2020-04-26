@@ -1,0 +1,22 @@
+{
+    "name": "Tolæon Delta Studio &trade;",
+    "icon": "",
+    "logo": {
+        "dark": "",
+        "light": ""
+    },
+    "welcome": {
+        "title": "Welcome to Your Workspace",
+        "links": ["website", "documentation"]
+    },
+    "links": {
+        "website": {
+            "name": "Discover Delta Studio",
+            "url": "https://tolaeon.io/products/delta-studio/overview"
+        },
+        "documentation": {
+            "name": "Browse Documentation",
+            "url": "https://delta.tolaeon.io/docs"
+        }
+    }
+}
