@@ -48,7 +48,8 @@ spec:
         discoverable: false
   containers:
    - name: theia-ide
-     image: "docker.io/vgulyy/che-theia-codeready-workspaces:next"
+     # image: "docker.io/vgulyy/che-theia-codeready-workspaces:next"
+     image: "quay.io/eclipse/che-theia:latest"
      env:
          - name: THEIA_PLUGINS
            value: local-dir:///plugins
