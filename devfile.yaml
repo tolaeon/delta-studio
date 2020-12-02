@@ -1,13 +1,30 @@
-metadata:
-  name: Tolaeon Delta Studio
-projects:
-  - name: delta-studio
-    source:
-      location: 'https://github.com/tolaeon/delta-studio.git'
-      type: git
-      branch: master
-components:
-  - type: cheEditor
-    reference: >-
-      https://github.com/tolaeon/delta-studio/raw/master/che-editor.meta.yaml
 apiVersion: 1.0.0
+metadata:
+  name: netsuite-sdk-test
+projects:
+  - name: netsuite-account-sdk
+    source:
+      location: 'git@gitlab.com:keeco/netsuite-account.git'
+      type: git
+      branch: develop
+components:
+  - id: che-incubator/typescript/latest
+    type: chePlugin
+  - type: chePlugin
+    reference: "https://raw.githubusercontent.com/tolaeon/delta-studio/master/plugin.yaml"
+  - mountSources: true
+    command:
+      - sleep
+      - infinity
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'registry.gitlab.com/tolaeon/sdf-docker:v0-3-0'
+    alias: sdfcli
+commands:
+  - name: authenticate
+    actions:
+      - workdir: '${CHE_PROJECTS_ROOT}/netsuite-account'
+        type: exec
+        command: 'sdfcli authenticate -account ${NS_ACCOUNT} -authid ${SDF_AUTHID} -tokenid ${SDF_TOKENID} -tokensecret ${SDF_TOKENSECRET} -savetoken'
+        component: sdfcli
+

@@ -1,0 +1,13 @@
+metadata:
+  name: Tolaeon Delta Studio
+projects:
+  - name: delta-studio
+    source:
+      location: 'https://github.com/tolaeon/delta-studio.git'
+      type: git
+      branch: master
+components:
+  - type: cheEditor
+    reference: >-
+      https://github.com/tolaeon/delta-studio/raw/master/che-editor.meta.yaml
+apiVersion: 1.0.0

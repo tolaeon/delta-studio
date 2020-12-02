@@ -1,0 +1,16 @@
+apiVersion: v2
+publisher: Oracle
+name: suitecloud-vscode-extension
+version: 0.0.1
+type: VS Code extension
+displayName: SuiteCloud SDK
+title: SuiteCloud SDK
+description: NetSuite SuiteCloud VSCode extention base on nodejs-cli
+icon: https://raw.githubusercontent.com/redhat-developer/codeready-workspaces/master/dependencies/che-plugin-registry/resources/images/default.svg?sanitize=true
+repository: https://github.com/oracle/netsuite-suitecloud-sdk.git
+category: Other
+firstPublicationDate: '2020-12-01'
+latestUpdateDate: '2020-12-01'
+spec:
+  extensions:
+    - "https://raw.githubusercontent.com/tolaeon/delta-studio/master/suitecloud-vscode-extension-0.0.1.vsix"
